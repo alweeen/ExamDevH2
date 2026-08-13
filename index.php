@@ -91,7 +91,7 @@ $results = [
     ]
 ];
 
-// Logic mapping from the requirements
+// login reqs
 // If a has the highest count, output Result 2
 // If b has the highest count, output Result 3
 // If c has the highest count, output Result 1
@@ -147,7 +147,7 @@ if (!isset($_SESSION['question_order']) || $_SERVER['REQUEST_METHOD'] !== 'POST'
     shuffle($questions);
     $_SESSION['question_order'] = $questions;
 } else {
-    // Preserve order if there was a validation error so the user doesn't get confused
+    // just for edge case hehe, Preserve order if there was a validation error so the user doesn't get confused
     $questions = $_SESSION['question_order'];
 }
 ?>
